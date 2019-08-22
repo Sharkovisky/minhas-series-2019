@@ -11,6 +11,14 @@
     background-color: #C0392B;
     /*padding: 30px;*/
     background-image: linear-gradient(#c0392b, #e74c3c);
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 600px){
+    .header{
+        flex-direction: column-reverse;
+        
+    }
 }
     .header__title{
         color: white;
@@ -53,30 +61,37 @@
     color: #C0392B;
     background-color: white;
 }
+.series{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .serie{
     text-align: center;
+    padding: 20px;
+    margin: 0 auto;
 }
-    .serie--title{
+    .serie__title{
         font-family: 'Open Sans', sans-serif;
         font-size: 32px;
         padding: 20px 0 5px;
     }
-    .serie--genre{
+    .serie__genre{
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
         columns: #a9a9a9;
         display: block;
         padding: 5px 0 20px;
     }
-    .serie--image{
+    .serie__image{
         display: block;
         max-width: 328px;
-        width: 20%; 
-        height: 20%;
+        /*width: 20%; 
+        height: 20%;*/
         margin: 0 auto;
         border-radius: 5px;
     }
-    .serie--readmore{
+    .serie__readmore{
         font-family: 'Roboto', sans-serif;
         color: white;
         background-color: #c0392b;
@@ -86,10 +101,10 @@
         margin: 10px auto;
         max-width: 328px;
         border-radius: 5px;
-        width: 20%; 
-        height: 20%;
+        /*width: 20%; 
+        height: 20%;*/
     }
-    .serie-readmore:hover{
+    .serie__readmore:hover{
         background-color: #E74C3C;
     }
 .footer{
@@ -98,10 +113,10 @@
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
-    .footer--element{
+    .footer__element{
         padding: 20px;
     }
-    .footer--image{
+    .footer__image{
         width: 1.5%;
         height: 1.5%;
         padding-top: 10px;
@@ -110,19 +125,19 @@
 .seriedetail{
         text-align: center;
     }
-        .seriedetail--title{
+        .seriedetail__title{
             font-family: 'Open Sans', sans-serif;
             font-size: 32px;
             padding: 20px 0 5px;
         }
-        .seriedetail--genre{
+        .seriedetail__genre{
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
             columns: #a9a9a9;
             display: block;
             padding: 5px 0 20px;
         }
-        .seriedetail--image{
+        .seriedetail__image{
             display: block;
             max-width: 328px;
             width: 20%; 
@@ -130,7 +145,7 @@
             margin: 0 auto;
             border-radius: 5px;
         }
-        .seriedetail--text{
+        .seriedetail__text{
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
             line-height: 1.5;
@@ -138,7 +153,7 @@
             max-width: 328px;
             margin: 0 auto;
         }
-        .seriedetail--watchtrailer{
+        .seriedetail__watchtrailer{
             font-family: 'Roboto', sans-serif;
             color: white;
             background-color: #c0392b;
@@ -151,27 +166,27 @@
             width: 20%; 
             height: 20%;
         }
-        .seriedetail--watchtrailer:hover{
+        .seriedetail__watchtrailer:hover{
             background-color: #E74C3C;
         }
 .serieavaliation{
     background-color: #EEEEEE;
     margin: 10px;
 }
-    .serieavaliation--title{
+    .serieavaliation__title{
         text-align: center;
         font-size: 18px;
         padding: 30px 0 10px;
     }
-    .serieavaliation--images{
+    .serieavaliation__images{
         text-align: center;
     }
-    .serieavaliation--percent{
+    .serieavaliation__percent{
         text-align: center;
         color: green;
         font-size: 37px;
         font-family: 'Roboto', sans-serif;
     }
-    .serieavaliation--twitter{
+    .serieavaliation__twitter{
         margin: 0 50px;
     }
