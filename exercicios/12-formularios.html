@@ -1,17 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulários</title>
+  <style>
+    *{
+      padding: 0; margin: 0;
+    }
+    .container-campo{
+      margin: 10px;
+    }
+    .campo{
+      padding: 5px;
+      border: 0;
+      border-bottom: 1px royalblue solid;
+      color: royalblue;
+    }
+    .label{
+      color: royalblue;
+      display: inline-block;
+      min-width: 100px;
+    }
+    .btn-salvar{
+      border: 0;
+      padding: 5px;
+      color: white;
+      background-color: royalblue;
+      cursor: pointer;
+    }
+    .btn-salvar:hover{
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div class="container-campo textarea">
+      <label for="nome" class="label">Nome:</label>
+      <input type="text" class="campo" id="nome" required placeholder="Ex: José">
+    </div>
+    <div class="container-campo">
+      <label for="sobrenome" class="label">Sobrenome:</label>
+      <input type="text" class="campo" id="sobrenome" disabled>
+    </div>
+    <div class="container-campo">
+      <label for="fone" class="label">Fone:</label>
+      <input for="text" class="campo" id="fone" pattern="^[0-9]{5}-[0-9]{4}" placeholder="99999-9999"></input>
+    </div>
+    <div class="container-campo">
+      <label for="idade" class="label">Idade:</label>
+      <input type="text" class="campo" id="idade" min="10" max="32">
+    </div>
+    <div class="container-campo">
+      <label for="" class="label">Sexo:</label>
+      <input type="radio" id="sexo-masc" name="sexo" checked>
+      <label for="sexo-masc" class="label">masculino</label>
+      <input type="radio" id="sexo-fem" name="sexo">
+      <label for="sex-fem" class="label">feminino</label>
+    </div>
+    <div class="container-campo">
+      <input type="checkbox" id="email">
+      <label for="email" class="label">Deseja receber e-mails?</label>
+    </div>
+    <div class="container-campo">
+      <label for="estado" class="label">Estado:</label>
+      <select id="estado" class="campo">
+        <option value="AC">Acre</option>
+        <option value="AM">Amazonas</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+      </select>
+    </div>
+    <div class="container-campo" style="display: flex">
+      <label for="obs" class="label">Observações:</label>
+      <textarea id="obs" cols="30" rows="10"></textarea>
+    </div>
+    <div class="container-campo">
+      <input type="submit" class="btn-salvar" value="Cadastrar">
+    </div>
+  </form>
+</body>
+</html>
 <!-- 
   Exercício 11: construa o fomulário; faça a estilização.
  -->
-
- Formulários
-Nome:
-Idade:
-Sexo: (masculino, feminino)
-Estado:
-  - Acre
-  - Amapá
-  - Amazonas
-  - Rondônia
-  - Roraima
-  - Tocantins
-Mensagem:
-Aceita os termos do contrato?
